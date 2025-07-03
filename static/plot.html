@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Price Plot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Stock Price Plot</h1>
+        
+        <div class="plot-container">
+            <img src="{{ plot_path }}" alt="Stock Price Plot">
+        </div>
+
+        <div class="info">
+            <h2>Details</h2>
+            <p><strong>Last Predicted Value:</strong> {{ last_predicted_value }}</p>
+            <p><strong>Mean Squared Error (MSE):</strong> {{ mse }}</p>
+            <p><strong>Mean Absolute Error (MAE):</strong> {{ mae }}</p>
+            <p><strong>R-squared (R²):</strong> {{ r2 }}%</p>
+        </div>
+
+        <a href="/" class="back-button">Back to Home</a>
+    </div>
+</body>
+</html>
