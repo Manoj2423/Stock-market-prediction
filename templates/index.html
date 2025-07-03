@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %}Home - Stock Market Predictor{% endblock %}
+
+{% block content %}
+<div class="home-container">
+    <h1>Welcome to Stock Market Predictor</h1>
+    <p>Use our tool to predict stock prices using different models.</p>
+    <a href="{{ url_for('predict_form') }}" class="btn">Go to Stock Prediction</a>
+</div>
+{% endblock %}
